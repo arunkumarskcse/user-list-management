@@ -2,7 +2,7 @@
   "name": "user-list-management",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arunkumarskcse.github.io/user-list-management",
+  "homepage": "/user-list-management",
   "dependencies": {
     "@ant-design/icons": "^6.0.2",
     "@reduxjs/toolkit": "^2.9.0",
