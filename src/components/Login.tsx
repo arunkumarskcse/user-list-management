@@ -28,21 +28,21 @@ const Login: React.FC = () => {
         }, 2000);
       }
     }
-  }, [userData, navigate]);
+  }, [userData, navigate, messageApi]);
 
   useEffect(() => {
     if (userLogError && Object.keys(userLogError).length > 0) {
       messageApi.error('Login failed: ' + (typeof userLogError === 'string' ? userLogError : 'Invalid credentials'));
       setLoading(false); // stop loading
     }
-  }, [userLogError]);
+  }, [userLogError, messageApi]);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
       navigate('/users'); // only redirect if token exists
     }
-  }, []);
+  }, [navigate]);
 
   const onFinish = async (values: { email: string; password: string }) => {
     setLoading(true); // start loading
