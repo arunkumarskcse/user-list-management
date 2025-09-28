@@ -43,11 +43,6 @@ export default function AdminData(state = initialState, action:any) {
     case UserAction.EDIT_USER_ERROR:
       return { ...state, editWorkSiteError: action?.payload };
 
-    // DELETE Method
-    case UserAction.DELETE_USER_DATA:
-      return { ...state, deleteWorkSiteData: action?.payload };
-    case UserAction.DELETE_USER_ERROR:
-
     default:
       return { ...state };
   }
