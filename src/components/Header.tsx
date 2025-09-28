@@ -1,13 +1,11 @@
 import { LogoutOutlined } from '@ant-design/icons';
 import { Avatar, Layout, message, Space, Typography } from 'antd';
-import { useNavigate } from 'react-router-dom';
 
 const HeaderComponent = () => {
 
     const { Header } = Layout;
     const { Title } = Typography;
 
-    const navigate = useNavigate();
 
     const [messageApi, contextHolder] = message.useMessage();
 

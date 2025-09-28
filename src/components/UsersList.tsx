@@ -186,7 +186,7 @@ const UserList: React.FC = () => {
   // calculate which users to show
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const currentUsers = mergedUsers.slice(startIndex, endIndex);
+  // const currentUsers = mergedUsers.slice(startIndex, endIndex);
 
   return (
 
