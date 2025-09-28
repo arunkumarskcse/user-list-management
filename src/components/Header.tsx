@@ -14,9 +14,10 @@ const HeaderComponent = () => {
     const Logout = () => {
         localStorage.removeItem('token');
         messageApi.success('Logged out successfully!');
-        setTimeout(() => {
-            navigate('/login');
-        }, 2000);
+        // setTimeout(() => {
+        //     navigate('/');
+        // }, 2000);
+        window.location.reload();
     }
 
     return (

@@ -37,6 +37,13 @@ const Login: React.FC = () => {
     }
   }, [userLogError]);
 
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      navigate('/users'); // only redirect if token exists
+    }
+  }, []);
+
   const onFinish = async (values: { email: string; password: string }) => {
     setLoading(true); // start loading
     dispatch(loginAction(values) as any);
