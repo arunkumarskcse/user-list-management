@@ -1,0 +1,41 @@
+.ant-table-wrapper {
+  margin: 0 !important;
+}
+
+.user-list-layout :where(.css-dev-only-do-not-override-1odpy5d).ant-card .ant-card-body {
+  padding: 0px;
+  border-radius: 0 0 8px 8px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* desktop/laptop default */
+  gap: 20px;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .user-list-layout .ant-card {
+    padding: 10px;
+  }
+
+  .ant-table {
+    font-size: 12px;
+  }
+
+  .ant-input {
+    width: 100% !important;
+  }
+
+  .ant-pagination {
+    text-align: center;
+  }
+}
+
+/* tablet + mobile */
+@media (max-width: 1024px) {
+  .user-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
