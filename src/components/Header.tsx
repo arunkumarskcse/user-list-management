@@ -1,7 +1,10 @@
 import { LogoutOutlined } from '@ant-design/icons';
 import { Avatar, Layout, message, Space, Typography } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const HeaderComponent = () => {
+
+    const navigate = useNavigate();
 
     const { Header } = Layout;
     const { Title } = Typography;
@@ -12,10 +15,10 @@ const HeaderComponent = () => {
     const Logout = () => {
         localStorage.removeItem('token');
         messageApi.success('Logged out successfully!');
-        // setTimeout(() => {
-        //     navigate('/');
-        // }, 2000);
-        window.location.reload();
+        setTimeout(() => {
+            navigate('/');
+        }, 2000);
+        // window.location.reload();
     }
 
     return (
